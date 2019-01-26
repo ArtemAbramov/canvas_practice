@@ -69,6 +69,18 @@ const cloud1 = new Obj({
   start: 360
 });
 
+const cloud2 = new Obj({
+  name: 'Cloud_2',
+  sx: 0,
+  sy: 185,
+  width: 187,
+  height: 91,
+  dx: 0,
+  dy: 860,
+  speed: 0.6,
+  start: 860
+});
+
 function sea() {
   ctx.clearRect(0, 0, 1280, 760);
   ctx.fillStyle = '#7AE2F0';
@@ -81,6 +93,8 @@ function mainLoop () {
   raft.render();
   cloud1.update();
   cloud1.render();
+  cloud2.update();
+  cloud2.render();
   requestAnimationFrame(mainLoop);
 }
 
